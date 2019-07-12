@@ -2,6 +2,7 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
+axios.get('https://api.github.com/users/jonesy212')
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -9,7 +10,16 @@
 
    Skip to Step 3.
 */
-
+function creatUserID {
+  const card = document.createElement('div')
+  const avatar = document.creatElement('img')
+  const name = document.createElement('div')
+  const location = document.creatElement('div')
+  const htmlUrl = document.creatElement('div')
+  const followers = document.creatElement()
+  const following = document.creatElement()
+  const login = document.creatElement()
+}
 /* Step 4: Pass the data received from Github into your function, 
            create a new component and add it to the DOM as a child of .cards
 */
