@@ -3,6 +3,9 @@
            https://api.github.com/users/<your name>
 */
 axios.get('https://api.github.com/users/jonesy212')
+  .then(data => {
+    console.log('response', data)
+  })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -10,19 +13,57 @@ axios.get('https://api.github.com/users/jonesy212')
 
    Skip to Step 3.
 */
-function creatUserID {
-  const card = document.createElement('div')
-  const avatar = document.creatElement('img')
-  const name = document.createElement('div')
-  const location = document.creatElement('div')
-  const htmlUrl = document.creatElement('div')
-  const followers = document.creatElement()
-  const following = document.creatElement()
-  const login = document.creatElement()
-}
+
 /* Step 4: Pass the data received from Github into your function, 
            create a new component and add it to the DOM as a child of .cards
 */
+
+
+
+const cards = document.querySelector('.cards')
+
+function UserCards(imgUrl, UserInfo) {
+  //create the elements
+  const card = document.createElement('div')
+  const avatar = document.creatElement('img')
+  const name = document.createElement('h2')
+  const bio = document.createElement('h3')
+  const location = document.creatElement('h3')
+  const followers = document.creatElement('h3')
+  const following = document.creatElement('h3')
+  const login = document.creatElement('h4')
+
+  //set styles
+  cards.classList.add('cards')
+  avatar.classList.add('img')
+  name.classList.add('name')
+  login.classList.add('username')
+  location.classList.add('User-location')
+  url.classList.add('User-Github ')
+  followers.classList.add('User-followers')
+  following.classList.add('User-following')
+  bio.classList.add('User-bio')
+  
+  //seat the content
+  img.src = imgUrl
+  name.textContent =`Name: ${UserInfo}`
+  login.textContent =`Username: ${UserInfo}`
+  location.textContent =`Location: ${UserInfo}`
+  url.textContent =`Github: ${UserInfo}`
+  follower.textContent =`Followers: ${UserInfo}`
+  following.textContent =`Following: ${UserInfo}`
+  bio.textContent =`Bio: ${UserInfo}`
+
+  //put them together
+  card.appendChild(img)
+  card.appendChild(img)
+  card.appendChild(img)
+  card.appendChild(img)
+  card.appendChild(img)
+  card.appendChild(img)
+  card.appendChild(img)
+
+}
 
 /* Step 5: Now that you have your own card getting added to the DOM, either 
           follow this link in your browser https://api.github.com/users/<Your github name>/followers 
@@ -34,10 +75,24 @@ function creatUserID {
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+
+  axios.get('https://api.github.com/users/jonesy212/followers')
+      .then(data => {
+        console.log('UserInfo', data)
+      })
+
+  //   forEach() => {
+
+  //   }
+
+// const followersArray = [];
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
+
+promise.then(data => {
+
+})
 
 <div class="card">
   <img src={image url of user} />
